@@ -73,6 +73,15 @@ def main():
     #    that is a "user error" -- do NOT deal with that.
     #
     # ------------------------------------------------------------------
+
+    my_entry_box = ttk.Entry(frame1)
+    my_entry_box.grid()
+
+    other_button = ttk.Button(frame1, text='Other Function')
+    other_button['command'] = (lambda: other_function(number_number))
+    other_button.grid()
+
+
     ####################################################################
     # HINT:
     #   You will need to obtain the INTEGER from the STRING
@@ -98,6 +107,13 @@ def check_for_ok(entry_box):
         print('Hello')
     else:
         print('Goodbye')
+
+def other_function(entry_box,number_number):
+    contents = entry_box.get()
+    number = number_number.get()
+
+    for k in range(number):
+        print(contents)
 
 
 # ----------------------------------------------------------------------
