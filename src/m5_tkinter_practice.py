@@ -92,7 +92,7 @@ def main():
     ####################################################################
 
     # ------------------------------------------------------------------
-    # TODO: 8. As time permits, do other interesting GUI things!
+    # DONE: 8. As time permits, do other interesting GUI things!
     # ------------------------------------------------------------------
 
     root.mainloop()
