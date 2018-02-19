@@ -59,7 +59,7 @@ def main():
 
 
     # ------------------------------------------------------------------
-    # TODO: 7.
+    # DONE: 7.
     #    -- Put a second Entry on the Frame.
     #    -- Put a third Button on the frame.
     #    -- Make this new Button respond to a button-press as follows:
@@ -74,11 +74,11 @@ def main():
     #
     # ------------------------------------------------------------------
 
-    my_entry_box = ttk.Entry(frame1)
-    my_entry_box.grid()
+    my_entry_box2 = ttk.Entry(frame1)
+    my_entry_box2.grid()
 
     other_button = ttk.Button(frame1, text='Other Function')
-    other_button['command'] = (lambda: other_function(number_number))
+    other_button['command'] = (lambda: other_function(my_entry_box, int(my_entry_box2)))
     other_button.grid()
 
 
@@ -108,7 +108,7 @@ def check_for_ok(entry_box):
     else:
         print('Goodbye')
 
-def other_function(entry_box,number_number):
+def other_function(number_number,entry_box):
     contents = entry_box.get()
     number = number_number.get()
 
